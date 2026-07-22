@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetSail Novel Course | Wonder - Lesson 4</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wonderSky: '#47bbf0',
+                        wonderSkyDark: '#299dd2',
+                        wonderSkyLight: '#eef8fe',
+                        wonderNavy: '#0f2b48',
+                        wonderDark: '#1a1f2c',
+                        wonderCard: '#ffffff',
+                        wonderYellow: '#ffcb05'
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f2f9fd;
+            color: #1f2937;
+        }
+        .wonder-heading {
+            font-family: 'Outfit', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #eef8fe;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #88d0f3;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-wonderSky selection:text-white">
+
+    <!-- Top Brand & Header Bar -->
+    <header class="bg-wonderSky text-white shadow-md border-b-4 border-wonderSkyDark sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white text-wonderSky p-2.5 rounded-xl font-bold flex items-center shadow-inner">
+                    <i class="fa-solid fa-ship text-xl mr-2"></i>
+                    <span class="tracking-wide text-xs uppercase font-extrabold text-wonderNavy">SetSail</span>
+                </div>
+                <div>
+                    <span class="bg-wonderNavy text-xs font-semibold px-2.5 py-0.5 rounded-full text-wonderSkyLight inline-block mb-0.5">Novel Course</span>
+                    <h1 class="wonder-heading text-lg sm:text-xl font-bold leading-none tracking-tight">R. J. Palacio’s <span class="underline decoration-wonderNavy font-extrabold">Wonder</span></h1>
+                </div>
+            </div>
+
+            <!-- Header Progress & Control -->
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="flex items-center space-x-2 text-sm">
+                    <span class="text-xs uppercase font-bold text-sky-100">Lesson Progress</span>
+                    <div class="w-32 bg-sky-700/40 rounded-full h-3 overflow-hidden p-0.5 border border-sky-300/30">
+                        <div id="overall-progress" class="bg-wonderYellow h-full rounded-full transition-all duration-500" style="width: 15%"></div>
+                    </div>
+                    <span id="progress-percent" class="font-bold text-xs">15%</span>
+                </div>
+                <button onclick="toggleAudioReadAlong()" id="audio-btn" class="bg-white/20 hover:bg-white/30 text-white px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <span>Read-Along Audio</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="bg-gradient-to-b from-wonderSky via-wonderSky to-wonderSkyLight pt-8 pb-10 px-4 sm:px-6 relative overflow-hidden">
+        <div class="absolute right-6 top-4 opacity-10 pointer-events-none text-wonderNavy hidden lg:block">
+            <i class="fa-solid fa-glasses text-[220px]"></i>
+        </div>
+        
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border-2 border-sky-100 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                
+                <!-- Left Details -->
+                <div class="space-y-4 max-w-2xl">
+                    <div class="inline-flex items-center gap-2 bg-sky-100 text-wonderNavy px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-book-open"></i> Lesson 4 • Part One: August
+                    </div>
+                    <h2 class="wonder-heading text-3xl sm:text-4xl font-black text-wonderNavy leading-tight">
+                        Choose Kind: <span class="text-wonderSkyDark">Mr. Browne’s October Precept</span>
+                    </h2>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                        In this lesson, we review last class's vocabulary homework, explore August’s experiences during October, examine the deep message behind Mr. Browne’s precept, and preview vocabulary for the next chapters.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 pt-2 text-xs font-medium text-gray-500 border-t border-gray-100">
+                        <span class="flex items-center gap-1.5"><i class="fa-regular fa-clock text-wonderSkyDark"></i> Est. Time: 30 mins</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Precept Focus: October</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-brain text-wonderSkyDark"></i> Core Concept: Empathy & Choice</span>
+                    </div>
+                </div>
+
+                <!-- Right Precept Badge -->
+                <div class="w-full lg:w-80 bg-wonderNavy text-white p-6 rounded-xl shadow-lg border-b-4 border-wonderYellow relative group transform hover:-translate-y-1 transition-all">
+                    <div class="absolute -top-3 -right-3 bg-wonderYellow text-wonderNavy text-xs font-black px-3 py-1 rounded-full shadow">
+                        PRECEPT #2
+                    </div>
+                    <div class="text-xs uppercase tracking-widest text-sky-300 font-bold mb-2">October Precept</div>
+                    <blockquote class="wonder-heading text-lg font-bold text-white mb-4 leading-snug">
+                        “Your deeds are your monuments.”
+                    </blockquote>
+                    <p class="text-xs text-sky-200 text-right italic font-medium">— Inscription on an Ancient Egyptian Tomb</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Interactive Learning Dashboard Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+        
+        <!-- Tab Controls Navigation -->
+        <nav class="flex flex-wrap gap-2 border-b-2 border-sky-200 mb-8 pb-1">
+            <button onclick="switchTab('tab-hwvocab')" id="btn-tab-hwvocab" class="tab-btn active-tab px-4 py-2.5 rounded-t-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-wonderSky text-white border-t-2 border-x-2 border-wonderSky">
+                <i class="fa-solid fa-square-check"></i> 1. Homework Vocab Review
+            </button>
+            <button onclick="switchTab('tab-warmup')" id="btn-tab-warmup" class="tab-btn px-4 py-2.5 rounded-t-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-white text-gray-600 hover:bg-sky-50 border-t-2 border-x-2 border-transparent">
+                <i class="fa-solid fa-fire-flame-curved"></i> 2. Warm-Up
+            </button>
+            <button onclick="switchTab('tab-closereading')" id="btn-tab-closereading" class="tab-btn px-4 py-2.5 rounded-t-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-white text-gray-600 hover:bg-sky-50 border-t-2 border-x-2 border-transparent">
+                <i class="fa-solid fa-glasses"></i> 3. Close Reading
+            </button>
+            <button onclick="switchTab('tab-vocab')" id="btn-tab-vocab" class="tab-btn px-4 py-2.5 rounded-t-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-white text-gray-600 hover:bg-sky-50 border-t-2 border-x-2 border-transparent">
+                <i class="fa-solid fa-book-bookmark"></i> 4. Next Lesson Vocab Preview
+            </button>
+            <button onclick="switchTab('tab-workshop')" id="btn-tab-workshop" class="tab-btn px-4 py-2.5 rounded-t-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-white text-gray-600 hover:bg-sky-50 border-t-2 border-x-2 border-transparent">
+                <i class="fa-solid fa-pen-ruler"></i> 5. "Choose Kind" Workshop
+            </button>
+        </nav>
+
+        <!-- TAB 1: HOMEWORK VOCABULARY REVIEW (LAST CLASS) -->
+        <section id="tab-hwvocab" class="tab-content space-y-8">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
+                
+                <!-- Section Header -->
+                <div class="border-b border-gray-100 pb-4 flex flex-wrap justify-between items-center gap-4">
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide">
+                            <i class="fa-solid fa-clock-rotate-left"></i> Homework Checkpoint
+                        </div>
+                        <h3 class="wonder-heading text-2xl font-bold text-wonderNavy mt-1">
+                            Previous Class Vocabulary Quiz <span class="text-wonderSkyDark text-lg font-semibold">(Choose Kind - Mr. Browne's October Precept)</span>
+                        </h3>
+                        <p class="text-xs text-gray-500 mt-1">Review the 11 key words from last class's reading before moving into today's activities.</p>
+                    </div>
+
+                    <button onclick="toggleHwWordListModal()" class="bg-sky-50 hover:bg-sky-100 text-wonderNavy border border-sky-200 px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 shadow-xs">
+                        <i class="fa-solid fa-book-open text-wonderSky"></i>
+                        <span>Study Word List (11 Terms)</span>
+                    </button>
+                </div>
+
+                <!-- Homework Study Word List Drawer (Hidden by Default) -->
+                <div id="hw-wordlist-container" class="hidden bg-sky-50/70 p-5 rounded-2xl border-2 border-sky-200 space-y-4">
+                    <div class="flex items-center justify-between border-b border-sky-200 pb-3">
+                        <h4 class="wonder-heading text-base font-bold text-wonderNavy flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-wonderSky"></i> SetSail Foundations: Homework Word List Reference
+                        </h4>
+                        <button onclick="toggleHwWordListModal()" class="text-gray-400 hover:text-wonderNavy text-sm font-bold">
+                            <i class="fa-solid fa-xmark"></i> Close
+                        </button>
+                    </div>
+                    
+                    <div class="overflow-x-auto rounded-xl border border-sky-200 shadow-xs bg-white">
+                        <table class="w-full text-left border-collapse text-xs">
+                            <thead>
+                                <tr class="bg-wonderNavy text-white font-bold uppercase text-[10px] tracking-wider">
+                                    <th class="p-3 w-28">Word</th>
+                                    <th class="p-3 w-24">Part of Speech</th>
+                                    <th class="p-3">Definition</th>
+                                    <th class="p-3">Novel Sentence</th>
+                                    <th class="p-3 w-28">Chapter</th>
+                                </tr>
+                            </thead>
+                            <tbody id="hw-vocab-table-body" class="divide-y divide-sky-100 text-gray-700">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Interactive Quiz Container -->
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-r from-sky-50 to-blue-50/40 p-4 rounded-xl border border-sky-100 flex items-center justify-between flex-wrap gap-2">
+                        <div class="flex items-center gap-2 text-xs font-bold text-wonderNavy">
+                            <i class="fa-solid fa-pen-clip text-wonderSky text-sm"></i>
+                            <span>Complete the quotes using the correct vocabulary word:</span>
+                        </div>
+                        <span id="hw-quiz-counter" class="text-xs bg-white text-wonderNavy font-bold px-3 py-1 rounded-full shadow-xs border border-sky-100">
+                            11 Questions
+                        </span>
+                    </div>
+
+                    <!-- Homework Quiz Questions Grid -->
+                    <div id="hw-quiz-items" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <!-- Submission & Score Summary -->
+                    <div class="pt-4 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <button onclick="checkHwQuiz()" class="w-full sm:w-auto bg-wonderNavy hover:bg-wonderDark text-white px-6 py-3 rounded-xl font-bold text-xs transition-all shadow-md flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Submit & Check Answers
+                        </button>
+                        <div id="hw-quiz-results" class="hidden text-xs font-bold p-3 rounded-xl border"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 2: WARM-UP JOURNAL TOPICS -->
+        <section id="tab-warmup" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
+                <div class="border-b border-gray-100 pb-4 flex flex-wrap justify-between items-center gap-2">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-wonderSkyDark tracking-wide">Pre-Reading Warm-Up</span>
+                        <h3 class="wonder-heading text-2xl font-bold text-wonderNavy mt-1">Journal Topics</h3>
+                    </div>
+                    <span class="bg-sky-100 text-wonderNavy text-xs font-semibold px-3 py-1 rounded-full">
+                        Choose Option 1 OR Option 2 below
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- OPTION 1: Personal Reflection & Story Prediction -->
+                    <div class="border-2 border-sky-200 hover:border-wonderSky transition-all rounded-2xl p-6 bg-sky-50/30 flex flex-col justify-between space-y-4">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderNavy text-white text-xs font-bold px-3 py-1 rounded-full">Option 1</span>
+                                <span class="text-xs text-gray-500 font-medium"><i class="fa-solid fa-pen-nib text-wonderSkyDark"></i> Journal Reflection</span>
+                            </div>
+                            
+                            <h4 class="wonder-heading text-lg font-bold text-wonderNavy">Reflection & Prediction</h4>
+                            
+                            <div class="space-y-3 text-xs sm:text-sm text-gray-700 bg-white p-4 rounded-xl border border-sky-100 shadow-xs">
+                                <p class="font-medium"><strong>1)</strong> Have you ever felt different from other people? Where were you and when did it happen?</p>
+                                <hr class="border-sky-100 my-2">
+                                <p class="font-medium"><strong>2)</strong> Do you think August will make friends at school? Why or why not?</p>
+                            </div>
+
+                            <div class="space-y-2">
+                                <label class="block text-xs font-bold text-gray-700">Your Journal Entry:</label>
+                                <textarea id="warmup-option1-text" rows="5" placeholder="Write your reflections here... (e.g. One time I felt different when... I think August will/won't make friends because...)" class="w-full text-xs p-3 rounded-xl border border-gray-300 focus:outline-none focus:border-wonderSky focus:ring-2 focus:ring-sky-200 transition-all resize-none"></textarea>
+                            </div>
+                        </div>
+
+                        <button onclick="saveWarmup('option1')" class="w-full bg-wonderSky hover:bg-wonderSkyDark text-white py-2.5 rounded-xl font-bold text-xs transition-all shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-floppy-disk"></i> Save Option 1 Response
+                        </button>
+                    </div>
+
+                    <!-- OPTION 2: Grammar Practice - Present Unreal Conditional -->
+                    <div class="border-2 border-sky-200 hover:border-wonderSky transition-all rounded-2xl p-6 bg-sky-50/30 flex flex-col justify-between space-y-4">
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderNavy text-white text-xs font-bold px-3 py-1 rounded-full">Option 2</span>
+                                <span class="text-xs text-gray-500 font-medium"><i class="fa-solid fa-spell-check text-wonderSkyDark"></i> Grammar Focus</span>
+                            </div>
+
+                            <h4 class="wonder-heading text-lg font-bold text-wonderNavy">Grammar Practice</h4>
+                            
+                            <div class="text-xs text-gray-700 bg-white p-4 rounded-xl border border-sky-100 shadow-xs space-y-2">
+                                <p class="font-medium text-wonderNavy">
+                                    Write answers to 5 grammar questions using <strong>present unreal conditional</strong>:
+                                </p>
+                                <div class="bg-amber-50 text-amber-900 px-3 py-2 rounded-lg font-mono text-xs border border-amber-200">
+                                    If I could ... I would ...
+                                </div>
+                            </div>
+
+                            <!-- 5 Grammar Prompts -->
+                            <div class="space-y-3">
+                                <div class="space-y-1">
+                                    <label class="text-xs font-semibold text-gray-700">Q1. If I could change one rule at school...</label>
+                                    <input type="text" id="g-q1" placeholder="If I could change one rule, I would..." class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky">
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-xs font-semibold text-gray-700">Q2. If I were in August's position on his first day...</label>
+                                    <input type="text" id="g-q2" placeholder="If I were in August's position, I would..." class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky">
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-xs font-semibold text-gray-700">Q3. If I saw someone sitting alone at lunch...</label>
+                                    <input type="text" id="g-q3" placeholder="If I saw someone alone, I would..." class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky">
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-xs font-semibold text-gray-700">Q4. If I could pick any costume for Halloween...</label>
+                                    <input type="text" id="g-q4" placeholder="If I could pick any costume, I would..." class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky">
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-xs font-semibold text-gray-700">Q5. If I had to give advice to Jack Will...</label>
+                                    <input type="text" id="g-q5" placeholder="If I had to give advice, I would..." class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky">
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="saveWarmup('option2')" class="w-full bg-wonderNavy hover:bg-wonderDark text-white py-2.5 rounded-xl font-bold text-xs transition-all shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-circle-check"></i> Check & Save Option 2
+                        </button>
+                    </div>
+
+                </div>
+
+                <div id="warmup-feedback" class="hidden p-4 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-900 border border-emerald-200"></div>
+            </div>
+        </section>
+
+        <!-- TAB 3: CLOSE READING QUESTIONS (SORTED BY BOOK SEQUENCE / PAGE ORDER) -->
+        <section id="tab-closereading" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
+                <div class="border-b border-gray-100 pb-4 flex flex-wrap justify-between items-center gap-2">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-wonderSkyDark tracking-wide">Textual Analysis</span>
+                        <h3 class="wonder-heading text-2xl font-bold text-wonderNavy mt-1">Close Reading Questions</h3>
+                        <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-arrow-down-short-wide text-wonderSky"></i> Arranged in chronological sequence of Part One</p>
+                    </div>
+                    <span class="bg-sky-100 text-wonderNavy text-xs font-semibold px-3 py-1 rounded-full">
+                        8 Questions • Sequential Order
+                    </span>
+                </div>
+
+                <!-- Grid of 8 Questions in Page Order (pp. 47-65) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Q1 (pp. 47-48) -->
+                    <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 1</span>
+                                <span class="text-[10px] text-gray-400 font-medium">Ch. Choose Kind</span>
+                            </div>
+                            <h4 class="font-bold text-wonderNavy text-sm">What is Mr. Browne’s September Precept, and what does it mean?</h4>
+                            <textarea id="cr-q1" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="toggleHint('hint-1')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-1-lbl">Show Hint / Sample Answer</span>
+                        </button>
+                        <div id="hint-1" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                            <strong>Hint/Answer:</strong> "WHEN GIVEN THE CHOICE BETWEEN BEING RIGHT OR BEING KIND, CHOOSE KIND." It means that choosing kindness is more important than winning an argument or proving you are right.
+                        </div>
+                    </div>
+
+                    <!-- Q2 (p. 49) -->
+                    <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 2</span>
+                                <span class="text-[10px] text-gray-400 font-medium">Ch. Lunch</span>
+                            </div>
+                            <h4 class="font-bold text-wonderNavy text-sm">What does it mean to “save a seat” for someone?</h4>
+                            <textarea id="cr-q2" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="toggleHint('hint-2')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-2-lbl">Show Hint / Sample Answer</span>
+                        </button>
+                        <div id="hint-2" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                            <strong>Hint/Answer:</strong> Reserving an empty spot next to you at lunch or in class so that a specific friend can sit with you, demonstrating welcoming behavior and friendship.
+                        </div>
+                    </div>
+
+                    <!-- Q3 (p. 52) -->
+                    <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 3</span>
+                                <span class="text-[10px] text-gray-400 font-medium">Ch. The Summer Table</span>
+                            </div>
+                            <h4 class="font-bold text-wonderNavy text-sm">Summer tells August that their names “match”. How do they match?</h4>
+                            <textarea id="cr-q3" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="toggleHint('hint-3')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-3-lbl">Show Hint / Sample Answer</span>
+                        </button>
+                        <div id="hint-3" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                            <strong>Hint/Answer:</strong> Both "August" and "Summer" are connected to the summer season!
+                        </div>
+                    </div>
+
+                    <!-- Q4 (p. 54) -->
+                    <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 4</span>
+                                <span class="text-[10px] text-gray-400 font-medium">Ch. One to Ten</span>
+                            </div>
+                            <h4 class="font-bold text-wonderNavy text-sm">August talks about using a “scale of one to ten”. When his mom asks him about his day, he says it was a “five”. What kind of a day did August have?</h4>
+                            <textarea id="cr-q4" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="toggleHint('hint-4')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-4-lbl">Show Hint / Sample Answer</span>
+                        </button>
+                        <div id="hint-4" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                            <strong>Hint/Answer:</strong> A "five" represents an average or medium day—neither terrible nor amazing, right in the middle.
+                        </div>
+                    </div>
+
+                    <!-- Q5 (p. 58) -->
+                    <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 5</span>
+                                <span class="text-[10px] text-gray-400 font-medium">Ch. Padawan</span>
+                            </div>
+                            <h4 class="font-bold text-wonderNavy text-sm">What do you think the term “good call” means?</h4>
+                            <textarea id="cr-q5" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="toggleHint('hint-5')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-5-lbl">Show Hint / Sample Answer</span>
+                        </button>
+                        <div id="hint-5" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                            <strong>Hint/Answer:</strong> It means a good decision or a wise choice (such as Dad acknowledging Mom's decision to send August to school).
+                        </div>
+                    </div>
+
+                    <!-- Q6 (p. 62) -->
+                    <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 6</span>
+                                <span class="text-[10px] text-gray-400 font-medium">Ch. October</span>
+                            </div>
+                            <h4 class="font-bold text-wonderNavy text-sm">How long did it take all the kids in August’s school to get used to his face?</h4>
+                            <textarea id="cr-q6" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="toggleHint('hint-6')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-6-lbl">Show Hint / Sample Answer</span>
+                        </button>
+                        <div id="hint-6" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                            <strong>Hint/Answer:</strong> It took about one month (by October) for the other students at Beecher Prep to get accustomed to seeing his face.
+                        </div>
+                    </div>
+
+                    <!-- Q7 (p. 63) -->
+                    <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 7</span>
+                                <span class="text-[10px] text-gray-400 font-medium">Ch. Apples</span>
+                            </div>
+                            <h4 class="font-bold text-wonderNavy text-sm">What does “cracking up” mean?</h4>
+                            <textarea id="cr-q7" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="toggleHint('hint-7')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-7-lbl">Show Hint / Sample Answer</span>
+                        </button>
+                        <div id="hint-7" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                            <strong>Hint/Answer:</strong> "Cracking up" means laughing hard or uncontrollably at something funny.
+                        </div>
+                    </div>
+
+                    <!-- Q8 (p. 65) -->
+                    <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 8</span>
+                                <span class="text-[10px] text-gray-400 font-medium">Ch. Mr. Browne's October Precept</span>
+                            </div>
+                            <h4 class="font-bold text-wonderNavy text-sm">What do you think “deeds” are, based on what August writes about the precept?</h4>
+                            <textarea id="cr-q8" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="toggleHint('hint-8')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-8-lbl">Show Hint / Sample Answer</span>
+                        </button>
+                        <div id="hint-8" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                            <strong>Hint/Answer:</strong> "Deeds" are actions or things that people do. Your deeds represent who you are as a person ("Your deeds are your monuments").
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-100">
+                    <button onclick="saveCloseReading()" class="w-full sm:w-auto bg-wonderSky hover:bg-wonderSkyDark text-white px-6 py-2.5 rounded-xl font-bold text-xs transition-all shadow-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-floppy-disk"></i> Save All Answers
+                    </button>
+                    <div id="cr-status" class="hidden text-xs font-semibold text-emerald-700 bg-emerald-50 px-4 py-2 rounded-lg border border-emerald-200">
+                        <i class="fa-solid fa-circle-check mr-1"></i> Close Reading Answers Saved!
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 4: VOCABULARY PREVIEW FOR NEXT LESSON -->
+        <section id="tab-vocab" class="tab-content hidden space-y-8">
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
+                
+                <!-- Section Header -->
+                <div class="border-b border-gray-100 pb-4 flex flex-wrap justify-between items-center gap-4">
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-sky-100 text-wonderNavy px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide">
+                            <i class="fa-solid fa-list-check"></i> SetSail Foundations: Vocabulary Preview
+                        </div>
+                        <h3 class="wonder-heading text-2xl font-bold text-wonderNavy mt-1">
+                            Next Lesson Vocabulary <span class="text-wonderSkyDark text-lg font-semibold">(Apples – Names)</span>
+                        </h3>
+                        <p class="text-xs text-gray-500 mt-1">Key vocabulary terms for the upcoming chapters. Study definitions, sentences, and chapters.</p>
+                    </div>
+
+                    <!-- Mode View Switchers -->
+                    <div class="flex items-center gap-2">
+                        <button onclick="setVocabDisplayMode('table')" id="vocab-btn-table" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-wonderSky text-white shadow-xs">
+                            <i class="fa-solid fa-table-cells mr-1"></i> Table View
+                        </button>
+                        <button onclick="setVocabDisplayMode('cards')" id="vocab-btn-cards" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-sky-100 text-wonderNavy hover:bg-sky-200">
+                            <i class="fa-solid fa-clone mr-1"></i> Flashcards Mode
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chapter Filter Bar -->
+                <div class="flex flex-wrap items-center justify-between gap-3 bg-sky-50/50 p-3 rounded-xl border border-sky-100 text-xs">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <span class="font-bold text-wonderNavy flex items-center gap-1">
+                            <i class="fa-solid fa-filter text-wonderSky"></i> Filter Chapter:
+                        </span>
+                        <button onclick="filterVocabChapter('All')" class="vocab-chap-btn active-chap bg-wonderNavy text-white px-3 py-1 rounded-full font-semibold transition-all">All (11)</button>
+                        <button onclick="filterVocabChapter('Apples')" class="vocab-chap-btn bg-white text-gray-700 hover:bg-sky-100 px-3 py-1 rounded-full font-semibold border border-sky-200 transition-all">Apples (3)</button>
+                        <button onclick="filterVocabChapter('School Pictures')" class="vocab-chap-btn bg-white text-gray-700 hover:bg-sky-100 px-3 py-1 rounded-full font-semibold border border-sky-200 transition-all">School Pictures (1)</button>
+                        <button onclick="filterVocabChapter('The Cheese Touch')" class="vocab-chap-btn bg-white text-gray-700 hover:bg-sky-100 px-3 py-1 rounded-full font-semibold border border-sky-200 transition-all">The Cheese Touch (4)</button>
+                        <button onclick="filterVocabChapter('Costumes')" class="vocab-chap-btn bg-white text-gray-700 hover:bg-sky-100 px-3 py-1 rounded-full font-semibold border border-sky-200 transition-all">Costumes (3)</button>
+                    </div>
+                    <div class="text-gray-500 font-medium text-[11px] flex items-center gap-1">
+                        <i class="fa-solid fa-volume-high text-wonderSky"></i> Click audio button to hear pronunciation
+                    </div>
+                </div>
+
+                <!-- VIEW 1: STRUCTURED TABLE VIEW -->
+                <div id="vocab-table-container" class="overflow-x-auto rounded-xl border border-sky-100 shadow-xs">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead>
+                            <tr class="bg-wonderNavy text-white font-bold uppercase tracking-wider text-[11px]">
+                                <th class="p-3.5 w-32">Word</th>
+                                <th class="p-3.5 w-28">Part of Speech</th>
+                                <th class="p-3.5">Definition</th>
+                                <th class="p-3.5">Sentence from Novel</th>
+                                <th class="p-3.5 w-32">Chapter</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vocab-table-body" class="divide-y divide-sky-100 bg-white text-gray-700">
+                            <!-- Populated dynamically via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- VIEW 2: FLASHCARD GRID VIEW -->
+                <div id="vocab-cards-container" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Populated dynamically via JS -->
+                </div>
+
+                <!-- Quick Interactive Practice Quiz for Next Lesson Vocab -->
+                <div class="mt-8 border-t border-sky-100 pt-6 space-y-4">
+                    <div class="flex items-center justify-between flex-wrap gap-2">
+                        <h4 class="wonder-heading text-lg font-bold text-wonderNavy flex items-center gap-2">
+                            <i class="fa-solid fa-graduation-cap text-wonderSky"></i> Quick Preview Check: Vocabulary Match
+                        </h4>
+                        <span class="text-xs font-semibold text-wonderSkyDark bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
+                            Preview key terms
+                        </span>
+                    </div>
+
+                    <div id="vocab-practice-box" class="bg-gradient-to-r from-sky-50 to-blue-50/50 p-5 rounded-2xl border border-sky-200 space-y-4">
+                        <p class="text-xs font-medium text-gray-700">Test your understanding of the upcoming words:</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="next-vocab-quiz-items">
+                            <!-- Quiz items dynamically generated -->
+                        </div>
+
+                        <div class="flex items-center justify-between pt-2">
+                            <button onclick="checkNextVocabQuiz()" class="bg-wonderSky hover:bg-wonderSkyDark text-white px-5 py-2 rounded-xl font-bold text-xs transition-all shadow-xs flex items-center gap-2">
+                                <i class="fa-solid fa-circle-check"></i> Check Vocabulary Mastery
+                            </button>
+                            <span id="next-vocab-quiz-score" class="text-xs font-bold text-wonderNavy"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 5: "CHOOSE KIND" WORKSHOP -->
+        <section id="tab-workshop" class="tab-content hidden space-y-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Left: Interactive Choice Scenario Simulator -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-wonderSkyDark tracking-wide">Interactive Dilemma</span>
+                        <h3 class="wonder-heading text-2xl font-bold text-wonderNavy mt-1">What Would You Do?</h3>
+                        <p class="text-xs text-gray-500 mt-1">Test your decisions against the October Precept.</p>
+                    </div>
+
+                    <div id="scenario-box" class="bg-sky-50/60 p-5 rounded-xl border border-sky-200 space-y-4">
+                        <span class="text-xs font-bold bg-wonderNavy text-white px-2.5 py-0.5 rounded-full">Scenario 1</span>
+                        <p id="scenario-text" class="text-sm font-medium text-wonderNavy leading-relaxed">
+                            A classmate incorrectly asserts a fact during a group presentation. You know for certain they are wrong. Interrupting them will make you look smart, but embarrassing them will hurt their confidence. What do you do?
+                        </p>
+
+                        <div class="space-y-2 pt-2">
+                            <button onclick="chooseOption('right')" class="w-full text-left p-3 rounded-lg border border-sky-200 bg-white hover:bg-sky-100/50 text-xs font-medium transition-all text-gray-700 flex items-center justify-between">
+                                <span>Option A: Correct them instantly in front of everyone to be technically right.</span>
+                                <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                            </button>
+                            <button onclick="chooseOption('kind')" class="w-full text-left p-3 rounded-lg border border-sky-200 bg-white hover:bg-sky-100/50 text-xs font-medium transition-all text-gray-700 flex items-center justify-between">
+                                <span>Option B: Wait until after the presentation to gently discuss it privately.</span>
+                                <i class="fa-solid fa-chevron-right text-gray-400 text-xs"></i>
+                            </button>
+                        </div>
+
+                        <div id="scenario-feedback" class="hidden p-4 rounded-xl text-xs font-medium space-y-2"></div>
+                    </div>
+                </div>
+
+                <!-- Right: Custom Precept Generator for Students -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase text-wonderSkyDark tracking-wide">Creative Writing</span>
+                        <h3 class="wonder-heading text-2xl font-bold text-wonderNavy mt-1">Create Your Own Monthly Precept</h3>
+                        <p class="text-xs text-gray-500 mt-1">Write your rule to live by, just like Mr. Browne's students.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Your Name / Student ID</label>
+                            <input type="text" id="precept-author" placeholder="e.g. Alex M." class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Your Personal Precept</label>
+                            <textarea id="precept-text" rows="3" placeholder="e.g. Kind words cost nothing, but can build a whole world for someone." class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                        </div>
+                        <button onclick="generatePreceptCard()" class="w-full bg-wonderSky hover:bg-wonderSkyDark text-white py-2.5 rounded-lg font-bold text-xs transition-all shadow-sm">
+                            <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Render Precept Card
+                        </button>
+                    </div>
+
+                    <div id="custom-precept-preview" class="hidden mt-4 bg-wonderNavy text-white p-6 rounded-xl border-b-4 border-wonderYellow relative">
+                        <span class="text-[10px] uppercase font-bold tracking-widest text-sky-300">SetSail Student Precept</span>
+                        <blockquote id="preview-quote" class="wonder-heading text-lg font-bold text-white mt-2 mb-3 italic">
+                            "..."
+                        </blockquote>
+                        <p id="preview-author" class="text-xs text-right text-wonderYellow font-bold">— Student</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Client-side Interactive JavaScript -->
+    <script>
+        /* =========================================================================
+           1. HOMEWORK VOCABULARY DATASET (Choose Kind - Mr. Browne's October Precept)
+           ========================================================================= */
+        const hwVocabData = [
+            {
+                word: "precept",
+                pos: "noun",
+                definition: "a rule or principle that guides behavior or decisions about important things",
+                sentence: "Basically, a precept is anything that helps guide us when making decisions about really important things.",
+                chapter: "Choose Kind"
+            },
+            {
+                word: "motto",
+                pos: "noun",
+                definition: "a short sentence or phrase expressing a belief or guiding principle",
+                sentence: "Like a motto? someone called out.",
+                chapter: "Choose Kind"
+            },
+            {
+                word: "doodling",
+                pos: "verb",
+                definition: "drawing simple pictures or patterns while thinking about something else",
+                sentence: "I was mostly doodling in my notebook while he talked.",
+                chapter: "Choose Kind"
+            },
+            {
+                word: "stampeding",
+                pos: "verb",
+                definition: "rushing forward in a wild, uncontrolled way as a large group",
+                sentence: "I just waited for everyone to finish stampeding and the lunchroom teacher to tell us what to do next.",
+                chapter: "Lunch"
+            },
+            {
+                word: "tortoise",
+                pos: "noun",
+                definition: "a slow-moving land reptile with a hard shell",
+                sentence: "I eat like a tortoise, if you've ever seen a tortoise eating.",
+                chapter: "Lunch"
+            },
+            {
+                word: "prehistoric",
+                pos: "adjective",
+                definition: "belonging to the time before written history; very ancient",
+                sentence: "Like some prehistoric swamp thing.",
+                chapter: "Lunch"
+            },
+            {
+                word: "exception",
+                pos: "noun",
+                definition: "a case that does not follow the general rule",
+                sentence: "If she wanted to sit here, we could make an exception.",
+                chapter: "The Summer Table"
+            },
+            {
+                word: "snuggling",
+                pos: "verb",
+                definition: "lying close to someone or something in a comfortable, affectionate way",
+                sentence: "I was snuggling with Daisy on my bed when Dad came to tuck me in later.",
+                chapter: "Padawan"
+            },
+            {
+                word: "huffy",
+                pos: "adjective",
+                definition: "annoyed or irritated and showing it through behavior",
+                sentence: "You've been kind of huffy with her all night long.",
+                chapter: "Padawan"
+            },
+            {
+                word: "gloomy",
+                pos: "adjective",
+                definition: "dark, sad, or depressing",
+                sentence: "They were a gloomy party that night, and the gloom gathered still deeper on them in the following days.",
+                chapter: "Padawan"
+            },
+            {
+                word: "contagious",
+                pos: "adjective",
+                definition: "able to be spread from one person to another through contact",
+                sentence: "Like I had some germ they could catch, like my face was contagious.",
+                chapter: "Wake Me Up when September Ends"
+            }
+        ];
+
+        /* Homework Quiz Generator */
+        function renderHwQuiz() {
+            const container = document.getElementById('hw-quiz-items');
+            if (!container) return;
+            container.innerHTML = '';
+
+            hwVocabData.forEach((item, idx) => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-4 sm:p-5 rounded-2xl border border-sky-100 shadow-xs hover:border-wonderSky transition-all space-y-3";
+
+                // Generate options with 1 correct and 3 distractors
+                let options = [item.word];
+                while (options.length < 4) {
+                    const randomWord = hwVocabData[Math.floor(Math.random() * hwVocabData.length)].word;
+                    if (!options.includes(randomWord)) {
+                        options.push(randomWord);
+                    }
+                }
+                // Shuffle options
+                options.sort(() => Math.random() - 0.5);
+
+                // Sentence blanked out
+                const regex = new RegExp(`\\b${item.word}\\b`, 'gi');
+                const blankSentence = item.sentence.replace(regex, '________');
+
+                let optionsHtml = options.map(opt => `
+                    <label class="flex items-center gap-2 p-2 rounded-lg border border-sky-100 hover:bg-sky-50 text-xs font-semibold text-gray-700 cursor-pointer transition-colors">
+                        <input type="radio" name="hw-q-${idx}" value="${opt}" class="text-wonderSky focus:ring-wonderSky">
+                        <span>${opt}</span>
+                    </label>
+                `).join('');
+
+                card.innerHTML = `
+                    <div class="flex items-center justify-between">
+                        <span class="bg-sky-100 text-wonderNavy font-bold text-[10px] px-2.5 py-0.5 rounded-full">Q${idx + 1}. Chapter: ${item.chapter}</span>
+                        <button onclick="speakWord('${item.word}')" title="Listen to word" class="text-wonderSky hover:text-wonderSkyDark text-xs">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </button>
+                    </div>
+                    <p class="text-xs font-semibold text-wonderNavy leading-relaxed italic bg-sky-50/50 p-3 rounded-xl border border-sky-100">
+                        "${blankSentence}"
+                    </p>
+                    <p class="text-[11px] text-gray-500 font-medium"><strong>Definition hint:</strong> ${item.definition}</p>
+                    <div class="grid grid-cols-2 gap-2 pt-1">
+                        ${optionsHtml}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        /* Render Homework Word List Table */
+        function renderHwTable() {
+            const tbody = document.getElementById('hw-vocab-table-body');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            hwVocabData.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = index % 2 === 0 ? 'bg-white hover:bg-sky-50/60' : 'bg-sky-50/20 hover:bg-sky-50/60';
+                
+                tr.innerHTML = `
+                    <td class="p-3 font-bold text-wonderNavy">
+                        <div class="flex items-center gap-1.5">
+                            <span>${item.word}</span>
+                            <button onclick="speakWord('${item.word}')" class="text-wonderSky hover:text-wonderSkyDark text-[11px]">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                        </div>
+                    </td>
+                    <td class="p-3"><span class="bg-sky-100 text-wonderNavy font-semibold text-[10px] px-2 py-0.5 rounded-full uppercase">${item.pos}</span></td>
+                    <td class="p-3 font-medium text-gray-800 text-[11px]">${item.definition}</td>
+                    <td class="p-3 italic text-gray-600 text-[11px]">"${item.sentence}"</td>
+                    <td class="p-3"><span class="bg-gray-100 text-gray-700 font-semibold text-[10px] px-2 py-0.5 rounded">${item.chapter}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function toggleHwWordListModal() {
+            const el = document.getElementById('hw-wordlist-container');
+            if (el) el.classList.toggle('hidden');
+        }
+
+        function checkHwQuiz() {
+            let score = 0;
+            let total = hwVocabData.length;
+
+            hwVocabData.forEach((item, idx) => {
+                const selected = document.querySelector(`input[name="hw-q-${idx}"]:checked`);
+                if (selected && selected.value === item.word) {
+                    score++;
+                }
+            });
+
+            const resultsEl = document.getElementById('hw-quiz-results');
+            resultsEl.classList.remove('hidden');
+
+            if (score === total) {
+                resultsEl.className = "text-xs font-bold p-3.5 rounded-xl border bg-emerald-50 text-emerald-900 border-emerald-300 flex items-center gap-2";
+                resultsEl.innerHTML = `<i class="fa-solid fa-trophy text-amber-500 text-lg"></i> Outstanding! Perfect score: ${score}/${total}! You mastered last class's vocabulary homework!`;
+            } else if (score >= 8) {
+                resultsEl.className = "text-xs font-bold p-3.5 rounded-xl border bg-sky-50 text-wonderNavy border-sky-300 flex items-center gap-2";
+                resultsEl.innerHTML = `<i class="fa-solid fa-circle-check text-wonderSky text-lg"></i> Great job! Score: ${score}/${total}. Review the word list for the ones you missed!`;
+            } else {
+                resultsEl.className = "text-xs font-bold p-3.5 rounded-xl border bg-amber-50 text-amber-900 border-amber-300 flex items-center gap-2";
+                resultsEl.innerHTML = `<i class="fa-solid fa-book-open-reader text-amber-600 text-lg"></i> Score: ${score}/${total}. Click "Study Word List" above to review definitions and try again!`;
+            }
+        }
+
+        /* =========================================================================
+           2. NEXT LESSON VOCABULARY DATASET (Apples - Names)
+           ========================================================================= */
+        const vocabData = [
+            {
+                word: "evites",
+                pos: "noun",
+                definition: "electronic invitations sent online or by email",
+                sentence: "We sent out the evites kind of late.",
+                chapter: "Apples"
+            },
+            {
+                word: "RSVP",
+                pos: "verb",
+                definition: "to respond to an invitation saying whether you will attend",
+                sentence: "His mom was the only person who didn't RSVP at all.",
+                chapter: "Apples"
+            },
+            {
+                word: "recital",
+                pos: "noun",
+                definition: "a performance of music or dance, usually by students",
+                sentence: "Charlotte had a dance recital earlier in the day.",
+                chapter: "Apples"
+            },
+            {
+                word: "aversion",
+                pos: "noun",
+                definition: "a strong dislike or unwillingness toward something",
+                sentence: "It's an aversion, which is a word I just learned in Mr. Browne's class. I have an aversion to having my picture taken.",
+                chapter: "School Pictures"
+            },
+            {
+                word: "classify",
+                pos: "verb",
+                definition: "to arrange things into groups based on similar qualities",
+                sentence: "We had to classify a substance as an acid or a base.",
+                chapter: "The Cheese Touch"
+            },
+            {
+                word: "substance",
+                pos: "noun",
+                definition: "a particular kind of matter with specific properties",
+                sentence: "We had to classify a substance as an acid or a base.",
+                chapter: "The Cheese Touch"
+            },
+            {
+                word: "fraction",
+                pos: "noun",
+                definition: "a very small part or amount of something",
+                sentence: "My hand accidentally bumped his hand for a fraction of a second.",
+                chapter: "The Cheese Touch"
+            },
+            {
+                word: "concerned",
+                pos: "adjective",
+                definition: "worried or anxious about something",
+                sentence: "What he was most concerned about was getting to the lab sink to wash his hands as fast as possible.",
+                chapter: "The Cheese Touch"
+            },
+            {
+                word: "oozing",
+                pos: "verb",
+                definition: "slowly flowing or leaking out",
+                sentence: "The Bleeding Scream, the one that has fake blood oozing out over the skull mask.",
+                chapter: "Costumes"
+            },
+            {
+                word: "coincidence",
+                pos: "noun",
+                definition: "when things happen at the same time by chance, not planned",
+                sentence: "Julian was going as Jango Fett, which was a weird coincidence.",
+                chapter: "Costumes"
+            },
+            {
+                word: "meltdown",
+                pos: "noun",
+                definition: "an emotional breakdown or loss of control",
+                sentence: "Via had this big crying meltdown about something.",
+                chapter: "Costumes"
+            }
+        ];
+
+        let currentVocabChapter = 'All';
+
+        function renderVocabTable() {
+            const tbody = document.getElementById('vocab-table-body');
+            const cardsContainer = document.getElementById('vocab-cards-container');
+            if (!tbody || !cardsContainer) return;
+
+            tbody.innerHTML = '';
+            cardsContainer.innerHTML = '';
+
+            const filtered = currentVocabChapter === 'All' 
+                ? vocabData 
+                : vocabData.filter(v => v.chapter === currentVocabChapter);
+
+            filtered.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.className = index % 2 === 0 ? 'bg-white hover:bg-sky-50/60 transition-colors' : 'bg-sky-50/20 hover:bg-sky-50/60 transition-colors';
+                
+                const regex = new RegExp(`(${item.word})`, 'gi');
+                const highlightedSentence = item.sentence.replace(regex, `<mark class="bg-amber-100 text-amber-900 font-semibold px-1 rounded">$1</mark>`);
+
+                tr.innerHTML = `
+                    <td class="p-3.5 font-bold text-wonderNavy">
+                        <div class="flex items-center gap-2">
+                            <span>${item.word}</span>
+                            <button onclick="speakWord('${item.word}')" title="Listen to pronunciation" class="text-wonderSky hover:text-wonderSkyDark transition-colors">
+                                <i class="fa-solid fa-volume-high text-xs"></i>
+                            </button>
+                        </div>
+                    </td>
+                    <td class="p-3.5"><span class="bg-sky-100 text-wonderNavy font-semibold text-[10px] px-2 py-0.5 rounded-full uppercase">${item.pos}</span></td>
+                    <td class="p-3.5 font-medium text-gray-800">${item.definition}</td>
+                    <td class="p-3.5 italic text-gray-600">${highlightedSentence}</td>
+                    <td class="p-3.5"><span class="bg-gray-100 text-gray-700 font-semibold text-[11px] px-2.5 py-0.5 rounded-lg">${item.chapter}</span></td>
+                `;
+                tbody.appendChild(tr);
+
+                const card = document.createElement('div');
+                card.className = "bg-white p-5 rounded-2xl border-2 border-sky-100 hover:border-wonderSky transition-all shadow-xs flex flex-col justify-between space-y-3";
+                card.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="bg-sky-100 text-wonderNavy font-bold text-[10px] px-2.5 py-0.5 rounded-full uppercase">${item.pos}</span>
+                            <span class="text-[10px] bg-gray-100 text-gray-600 font-bold px-2 py-0.5 rounded">${item.chapter}</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <h5 class="wonder-heading text-lg font-black text-wonderNavy">${item.word}</h5>
+                            <button onclick="speakWord('${item.word}')" class="w-7 h-7 bg-sky-50 hover:bg-wonderSky hover:text-white rounded-full text-wonderSky flex items-center justify-center transition-all">
+                                <i class="fa-solid fa-volume-high text-xs"></i>
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-700 font-medium"><strong class="text-wonderNavy">Def:</strong> ${item.definition}</p>
+                    </div>
+                    <div class="p-3 bg-sky-50/50 rounded-xl text-xs text-gray-600 italic border border-sky-100">
+                        "${highlightedSentence}"
+                    </div>
+                `;
+                cardsContainer.appendChild(card);
+            });
+        }
+
+        function filterVocabChapter(chapter) {
+            currentVocabChapter = chapter;
+            const btns = document.querySelectorAll('.vocab-chap-btn');
+            btns.forEach(btn => {
+                if (btn.innerText.includes(chapter)) {
+                    btn.className = "vocab-chap-btn bg-wonderNavy text-white px-3 py-1 rounded-full font-semibold transition-all shadow-xs";
+                } else {
+                    btn.className = "vocab-chap-btn bg-white text-gray-700 hover:bg-sky-100 px-3 py-1 rounded-full font-semibold border border-sky-200 transition-all";
+                }
+            });
+            renderVocabTable();
+        }
+
+        function setVocabDisplayMode(mode) {
+            const tableCont = document.getElementById('vocab-table-container');
+            const cardsCont = document.getElementById('vocab-cards-container');
+            const btnTable = document.getElementById('vocab-btn-table');
+            const btnCards = document.getElementById('vocab-btn-cards');
+
+            if (mode === 'table') {
+                tableCont.classList.remove('hidden');
+                cardsCont.classList.add('hidden');
+                btnTable.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-wonderSky text-white shadow-xs";
+                btnCards.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-sky-100 text-wonderNavy hover:bg-sky-200";
+            } else {
+                tableCont.classList.add('hidden');
+                cardsCont.classList.remove('hidden');
+                btnCards.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-wonderSky text-white shadow-xs";
+                btnTable.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-sky-100 text-wonderNavy hover:bg-sky-200";
+            }
+        }
+
+        function speakWord(word) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(word);
+                utterance.rate = 0.9;
+                utterance.lang = 'en-US';
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // Practice Quiz for Next Vocab
+        const nextVocabQuizData = [
+            { id: 'nv1', options: ['aversion', 'substance', 'meltdown'], answer: 'aversion', prompt: '1. A strong dislike or unwillingness toward something is an...' },
+            { id: 'nv2', options: ['evites', 'coincidence', 'recital'], answer: 'coincidence', prompt: '2. When two things happen at the same time by chance, it is a...' },
+            { id: 'nv3', options: ['classify', 'oozing', 'RSVP'], answer: 'classify', prompt: '3. To arrange things into groups based on similar qualities is to...' },
+            { id: 'nv4', options: ['meltdown', 'fraction', 'recital'], answer: 'fraction', prompt: '4. A very small part or amount of something is a...' }
+        ];
+
+        function renderNextVocabQuiz() {
+            const container = document.getElementById('next-vocab-quiz-items');
+            if (!container) return;
+            container.innerHTML = '';
+
+            nextVocabQuizData.forEach(q => {
+                const div = document.createElement('div');
+                div.className = "p-3 bg-white rounded-xl border border-sky-100 space-y-2";
+                
+                let optionsHtml = q.options.map(opt => `
+                    <label class="inline-flex items-center gap-1.5 text-xs mr-3 cursor-pointer">
+                        <input type="radio" name="${q.id}" value="${opt}"> <span class="font-semibold text-gray-800">${opt}</span>
+                    </label>
+                `).join('');
+
+                div.innerHTML = `
+                    <p class="text-xs font-bold text-wonderNavy">${q.prompt}</p>
+                    <div class="flex flex-wrap items-center">${optionsHtml}</div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function checkNextVocabQuiz() {
+            let correct = 0;
+            nextVocabQuizData.forEach(q => {
+                const sel = document.querySelector(`input[name="${q.id}"]:checked`);
+                if (sel && sel.value === q.answer) correct++;
+            });
+
+            const scoreEl = document.getElementById('next-vocab-quiz-score');
+            if (correct === nextVocabQuizData.length) {
+                scoreEl.className = "text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-lg border border-emerald-300";
+                scoreEl.innerHTML = `<i class="fa-solid fa-circle-check"></i> Perfect! ${correct}/${nextVocabQuizData.length} Terms Mastered!`;
+            } else {
+                scoreEl.className = "text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-lg border border-amber-300";
+                scoreEl.innerHTML = `Score: ${correct}/${nextVocabQuizData.length}. Review the table and try again!`;
+            }
+        }
+
+        /* =========================================================================
+           3. GENERAL TAB NAVIGATION & PROGRESS CONTROL
+           ========================================================================= */
+        function switchTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(el => el.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-wonderSky', 'text-white', 'border-wonderSky');
+                btn.classList.add('bg-white', 'text-gray-600', 'border-transparent');
+            });
+
+            const target = document.getElementById(tabId);
+            if (target) target.classList.remove('hidden');
+
+            const activeBtn = document.getElementById('btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-gray-600', 'border-transparent');
+                activeBtn.classList.add('bg-wonderSky', 'text-white', 'border-wonderSky');
+            }
+
+            updateProgress(tabId);
+        }
+
+        function updateProgress(tabId) {
+            const progressBar = document.getElementById('overall-progress');
+            const progressPercent = document.getElementById('progress-percent');
+            let percentage = 15;
+
+            if (tabId === 'tab-hwvocab') percentage = 15;
+            if (tabId === 'tab-warmup') percentage = 35;
+            if (tabId === 'tab-closereading') percentage = 55;
+            if (tabId === 'tab-vocab') percentage = 80;
+            if (tabId === 'tab-workshop') percentage = 100;
+
+            if (progressBar && progressPercent) {
+                progressBar.style.width = percentage + '%';
+                progressPercent.innerText = percentage + '%';
+            }
+        }
+
+        /* =========================================================================
+           4. WARM-UP & CLOSE READING SAVING / HINTS
+           ========================================================================= */
+        function saveWarmup(option) {
+            const feedback = document.getElementById('warmup-feedback');
+            feedback.classList.remove('hidden');
+            feedback.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> Successfully saved ${option === 'option1' ? 'Option 1 Journal Response' : 'Option 2 Grammar Practice'}!`;
+        }
+
+        function toggleHint(hintId) {
+            const hint = document.getElementById(hintId);
+            const lbl = document.getElementById(hintId + '-lbl');
+            if (hint.classList.contains('hidden')) {
+                hint.classList.remove('hidden');
+                if (lbl) lbl.innerText = "Hide Hint / Sample Answer";
+            } else {
+                hint.classList.add('hidden');
+                if (lbl) lbl.innerText = "Show Hint / Sample Answer";
+            }
+        }
+
+        function saveCloseReading() {
+            const status = document.getElementById('cr-status');
+            status.classList.remove('hidden');
+        }
+
+        /* =========================================================================
+           5. WORKSHOP SCENARIOS & PRECEPT GENERATOR
+           ========================================================================= */
+        function chooseOption(type) {
+            const feedback = document.getElementById('scenario-feedback');
+            feedback.classList.remove('hidden');
+            if (type === 'kind') {
+                feedback.className = "p-4 rounded-xl text-xs font-medium space-y-2 bg-emerald-50 text-emerald-900 border border-emerald-200";
+                feedback.innerHTML = `
+                    <div class="font-bold flex items-center gap-1.5 text-emerald-800">
+                        <i class="fa-solid fa-heart text-emerald-600"></i> You Chose Kind!
+                    </div>
+                    <p>By discussing the point privately afterward, you preserve your classmate's dignity while still ensuring accuracy. This directly honors Mr. Browne's precept!</p>
+                `;
+            } else {
+                feedback.className = "p-4 rounded-xl text-xs font-medium space-y-2 bg-amber-50 text-amber-900 border border-amber-200";
+                feedback.innerHTML = `
+                    <div class="font-bold flex items-center gap-1.5 text-amber-800">
+                        <i class="fa-solid fa-scale-balanced text-amber-600"></i> You Chose Being Right!
+                    </div>
+                    <p>While you were technically correct, interrupting publicly may embarrass your classmate. Remember: "When given the choice between being right or being kind, choose kind."</p>
+                `;
+            }
+        }
+
+        function generatePreceptCard() {
+            const author = document.getElementById('precept-author').value || 'Anonymous Student';
+            const text = document.getElementById('precept-text').value;
+            
+            if (!text.trim()) {
+                alert('Please type a precept before rendering!');
+                return;
+            }
+
+            const card = document.getElementById('custom-precept-preview');
+            document.getElementById('preview-quote').innerText = `“${text}”`;
+            document.getElementById('preview-author').innerText = `— ${author}`;
+            card.classList.remove('hidden');
+        }
+
+        function toggleAudioReadAlong() {
+            const btn = document.getElementById('audio-btn');
+            btn.classList.toggle('bg-wonderYellow');
+            btn.classList.toggle('text-wonderNavy');
+        }
+
+        /* Initialization */
+        window.addEventListener('DOMContentLoaded', () => {
+            renderHwTable();
+            renderHwQuiz();
+            renderVocabTable();
+            renderNextVocabQuiz();
+        });
+    </script>
+</body>
+</html>
