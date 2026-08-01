@@ -57,7 +57,6 @@
 </head>
 <body class="min-h-screen flex flex-col selection:bg-wonderSky selection:text-white">
 
-    <!-- Top Brand & Header Bar -->
     <header class="bg-wonderSky text-white shadow-md border-b-4 border-wonderSkyDark sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
             <div class="flex items-center space-x-3">
@@ -76,9 +75,9 @@
                 <div class="flex items-center space-x-2 text-sm">
                     <span class="text-xs uppercase font-bold text-sky-100">Lesson Progress</span>
                     <div class="w-32 bg-sky-700/40 rounded-full h-3 overflow-hidden p-0.5 border border-sky-300/30">
-                        <div id="overall-progress" class="bg-wonderYellow h-full rounded-full transition-all duration-500" style="width: 15%"></div>
+                        <div id="overall-progress" class="bg-wonderYellow h-full rounded-full transition-all duration-500" style="width: 20%"></div>
                     </div>
-                    <span id="progress-percent" class="font-bold text-xs">15%</span>
+                    <span id="progress-percent" class="font-bold text-xs">20%</span>
                 </div>
                 <button onclick="toggleAudioReadAlong()" id="audio-btn" class="bg-white/20 hover:bg-white/30 text-white px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-2 transition-all">
                     <i class="fa-solid fa-volume-high"></i>
@@ -88,7 +87,6 @@
         </div>
     </header>
 
-    <!-- Hero Banner Section -->
     <section class="bg-gradient-to-b from-wonderSky via-wonderSky to-wonderSkyLight pt-8 pb-10 px-4 sm:px-6 relative overflow-hidden">
         <div class="absolute right-6 top-4 opacity-10 pointer-events-none text-wonderNavy hidden lg:block">
             <i class="fa-solid fa-glasses text-[220px]"></i>
@@ -106,7 +104,7 @@
                         Choose Kind: <span class="text-wonderSkyDark">Mr. Browne’s October Precept</span>
                     </h2>
                     <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
-                        In this lesson, we review last class's vocabulary homework, explore August’s experiences during October, examine the deep message behind Mr. Browne’s precept, and preview vocabulary for the next chapters.
+                        In this lesson, we review last class's vocabulary homework, reflect in our warm-up journal, perform close reading analysis with textual quotes, preview upcoming chapter vocabulary, and explore Mr. Browne’s precept.
                     </p>
                     
                     <div class="flex flex-wrap gap-4 pt-2 text-xs font-medium text-gray-500 border-t border-gray-100">
@@ -130,16 +128,15 @@
         </div>
     </section>
 
-    <!-- Main Interactive Learning Dashboard Area -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
         
         <!-- Tab Controls Navigation -->
         <nav class="flex flex-wrap gap-2 border-b-2 border-sky-200 mb-8 pb-1">
             <button onclick="switchTab('tab-hwvocab')" id="btn-tab-hwvocab" class="tab-btn active-tab px-4 py-2.5 rounded-t-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-wonderSky text-white border-t-2 border-x-2 border-wonderSky">
-                <i class="fa-solid fa-square-check"></i> 1. Homework Vocab Review
+                <i class="fa-solid fa-square-check"></i> 1. Homework Vocab Quiz
             </button>
             <button onclick="switchTab('tab-warmup')" id="btn-tab-warmup" class="tab-btn px-4 py-2.5 rounded-t-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-white text-gray-600 hover:bg-sky-50 border-t-2 border-x-2 border-transparent">
-                <i class="fa-solid fa-fire-flame-curved"></i> 2. Warm-Up
+                <i class="fa-solid fa-fire-flame-curved"></i> 2. Warm-Up Journal
             </button>
             <button onclick="switchTab('tab-closereading')" id="btn-tab-closereading" class="tab-btn px-4 py-2.5 rounded-t-xl font-bold text-xs sm:text-sm flex items-center gap-2 transition-all bg-white text-gray-600 hover:bg-sky-50 border-t-2 border-x-2 border-transparent">
                 <i class="fa-solid fa-glasses"></i> 3. Close Reading
@@ -152,11 +149,9 @@
             </button>
         </nav>
 
-        <!-- TAB 1: HOMEWORK VOCABULARY REVIEW (LAST CLASS) -->
         <section id="tab-hwvocab" class="tab-content space-y-8">
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
                 
-                <!-- Section Header -->
                 <div class="border-b border-gray-100 pb-4 flex flex-wrap justify-between items-center gap-4">
                     <div>
                         <div class="inline-flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide">
@@ -165,7 +160,7 @@
                         <h3 class="wonder-heading text-2xl font-bold text-wonderNavy mt-1">
                             Previous Class Vocabulary Quiz <span class="text-wonderSkyDark text-lg font-semibold">(Choose Kind - Mr. Browne's October Precept)</span>
                         </h3>
-                        <p class="text-xs text-gray-500 mt-1">Review the 11 key words from last class's reading before moving into today's activities.</p>
+                        <p class="text-xs text-gray-500 mt-1">Review the 11 key terms from last class's reading before moving into today's activities.</p>
                     </div>
 
                     <button onclick="toggleHwWordListModal()" class="bg-sky-50 hover:bg-sky-100 text-wonderNavy border border-sky-200 px-4 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 shadow-xs">
@@ -232,7 +227,6 @@
             </div>
         </section>
 
-        <!-- TAB 2: WARM-UP JOURNAL TOPICS -->
         <section id="tab-warmup" class="tab-content hidden space-y-8">
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
                 <div class="border-b border-gray-100 pb-4 flex flex-wrap justify-between items-center gap-2">
@@ -329,164 +323,263 @@
             </div>
         </section>
 
-        <!-- TAB 3: CLOSE READING QUESTIONS (SORTED BY BOOK SEQUENCE / PAGE ORDER) -->
         <section id="tab-closereading" class="tab-content hidden space-y-8">
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
                 <div class="border-b border-gray-100 pb-4 flex flex-wrap justify-between items-center gap-2">
                     <div>
                         <span class="text-xs font-bold uppercase text-wonderSkyDark tracking-wide">Textual Analysis</span>
                         <h3 class="wonder-heading text-2xl font-bold text-wonderNavy mt-1">Close Reading Questions</h3>
-                        <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-arrow-down-short-wide text-wonderSky"></i> Arranged in chronological sequence of Part One</p>
+                        <p class="text-xs text-gray-500 mt-1"><i class="fa-solid fa-book text-wonderSky mr-1"></i> Listed in book sequence with specific chapter tags & novel references</p>
+                        <p class="text-xs font-medium text-amber-800 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-lg mt-2.5 inline-flex items-center gap-1.5 shadow-xs">
+                            <i class="fa-solid fa-desktop text-amber-600"></i>
+                            <span>Screenshare the novel and read together with the student if needed.</span>
+                        </p>
                     </div>
                     <span class="bg-sky-100 text-wonderNavy text-xs font-semibold px-3 py-1 rounded-full">
-                        8 Questions • Sequential Order
+                        8 Questions • Sequential Book Order
                     </span>
                 </div>
 
-                <!-- Grid of 8 Questions in Page Order (pp. 47-65) -->
+                <!-- Grid of 8 Questions in Sequential Book Order (Page order implied) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     
-                    <!-- Q1 (pp. 47-48) -->
+                    <!-- Q1: Ch. Choose Kind -->
                     <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <div class="flex items-center justify-between">
                                 <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 1</span>
-                                <span class="text-[10px] text-gray-400 font-medium">Ch. Choose Kind</span>
+                                <span class="text-xs font-bold text-wonderNavy bg-sky-100 px-2.5 py-0.5 rounded-md"><i class="fa-solid fa-bookmark text-wonderSky mr-1"></i> Chapter: Choose Kind</span>
                             </div>
                             <h4 class="font-bold text-wonderNavy text-sm">What is Mr. Browne’s September Precept, and what does it mean?</h4>
-                            <textarea id="cr-q1" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                            
+                            <!-- Novel Sentence Reference -->
+                            <div class="bg-sky-50/70 p-3 rounded-xl border border-sky-100 text-xs italic text-gray-700 space-y-1">
+                                <div class="font-bold text-wonderNavy not-italic flex items-center gap-1.5 text-[11px]">
+                                    <i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Novel Reference:
+                                </div>
+                                <p>“Mr. Browne’s September precept was: <span class="font-semibold text-wonderNavy">WHEN GIVEN THE CHOICE BETWEEN BEING RIGHT OR BEING KIND, CHOOSE KIND.</span>”</p>
+                            </div>
+
+                            <textarea id="cr-q1" rows="3" placeholder="Type your response here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
                         </div>
-                        <button onclick="toggleHint('hint-1')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
-                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-1-lbl">Show Hint / Sample Answer</span>
-                        </button>
-                        <div id="hint-1" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
-                            <strong>Hint/Answer:</strong> "WHEN GIVEN THE CHOICE BETWEEN BEING RIGHT OR BEING KIND, CHOOSE KIND." It means that choosing kindness is more important than winning an argument or proving you are right.
+                        
+                        <div class="pt-2 border-t border-sky-100/60">
+                            <button onclick="toggleHint('hint-1')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                                <i class="fa-regular fa-lightbulb"></i> <span id="hint-1-lbl">Show Hint / Sample Answer</span>
+                            </button>
+                            <div id="hint-1" class="hidden mt-2 text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                                <strong>Hint/Answer:</strong> The precept is "WHEN GIVEN THE CHOICE BETWEEN BEING RIGHT OR BEING KIND, CHOOSE KIND." It means that choosing kindness is far more important than winning an argument or trying to prove you are correct.
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Q2 (p. 49) -->
+                    <!-- Q2: Ch. Lunch -->
                     <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <div class="flex items-center justify-between">
                                 <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 2</span>
-                                <span class="text-[10px] text-gray-400 font-medium">Ch. Lunch</span>
+                                <span class="text-xs font-bold text-wonderNavy bg-sky-100 px-2.5 py-0.5 rounded-md"><i class="fa-solid fa-bookmark text-wonderSky mr-1"></i> Chapter: Lunch</span>
                             </div>
                             <h4 class="font-bold text-wonderNavy text-sm">What does it mean to “save a seat” for someone?</h4>
-                            <textarea id="cr-q2" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                            
+                            <!-- Novel Sentence Reference -->
+                            <div class="bg-sky-50/70 p-3 rounded-xl border border-sky-100 text-xs italic text-gray-700 space-y-1">
+                                <div class="font-bold text-wonderNavy not-italic flex items-center gap-1.5 text-[11px]">
+                                    <i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Novel Reference:
+                                </div>
+                                <p>“I sat down at an empty table and started eating my lunch... Then Summer came over and asked, <span class="font-semibold text-wonderNavy">'Hey, is anyone sitting here? I can save a seat for you.'</span>”</p>
+                            </div>
+
+                            <textarea id="cr-q2" rows="3" placeholder="Type your response here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
                         </div>
-                        <button onclick="toggleHint('hint-2')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
-                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-2-lbl">Show Hint / Sample Answer</span>
-                        </button>
-                        <div id="hint-2" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
-                            <strong>Hint/Answer:</strong> Reserving an empty spot next to you at lunch or in class so that a specific friend can sit with you, demonstrating welcoming behavior and friendship.
+
+                        <div class="pt-2 border-t border-sky-100/60">
+                            <button onclick="toggleHint('hint-2')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                                <i class="fa-regular fa-lightbulb"></i> <span id="hint-2-lbl">Show Hint / Sample Answer</span>
+                            </button>
+                            <div id="hint-2" class="hidden mt-2 text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                                <strong>Hint/Answer:</strong> Reserving an empty chair next to you at lunch or in class so a specific friend can sit with you, showing inclusion and friendship.
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Q3 (p. 52) -->
+                    <!-- Q3: Ch. The Summer Table -->
                     <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <div class="flex items-center justify-between">
                                 <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 3</span>
-                                <span class="text-[10px] text-gray-400 font-medium">Ch. The Summer Table</span>
+                                <span class="text-xs font-bold text-wonderNavy bg-sky-100 px-2.5 py-0.5 rounded-md"><i class="fa-solid fa-bookmark text-wonderSky mr-1"></i> Chapter: The Summer Table</span>
                             </div>
                             <h4 class="font-bold text-wonderNavy text-sm">Summer tells August that their names “match”. How do they match?</h4>
-                            <textarea id="cr-q3" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                            
+                            <!-- Novel Sentence Reference -->
+                            <div class="bg-sky-50/70 p-3 rounded-xl border border-sky-100 text-xs italic text-gray-700 space-y-1">
+                                <div class="font-bold text-wonderNavy not-italic flex items-center gap-1.5 text-[11px]">
+                                    <i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Novel Reference:
+                                </div>
+                                <p>“<span class="font-semibold text-wonderNavy">'Hey, our names match!'</span> she said. 'Summer and August! They’re both summer months!'”</p>
+                            </div>
+
+                            <textarea id="cr-q3" rows="3" placeholder="Type your response here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
                         </div>
-                        <button onclick="toggleHint('hint-3')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
-                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-3-lbl">Show Hint / Sample Answer</span>
-                        </button>
-                        <div id="hint-3" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
-                            <strong>Hint/Answer:</strong> Both "August" and "Summer" are connected to the summer season!
+
+                        <div class="pt-2 border-t border-sky-100/60">
+                            <button onclick="toggleHint('hint-3')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                                <i class="fa-regular fa-lightbulb"></i> <span id="hint-3-lbl">Show Hint / Sample Answer</span>
+                            </button>
+                            <div id="hint-3" class="hidden mt-2 text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                                <strong>Hint/Answer:</strong> Both "Summer" and "August" relate to the summer season (August is the month during summer).
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Q4 (p. 54) -->
+                    <!-- Q4: Ch. One to Ten -->
                     <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <div class="flex items-center justify-between">
                                 <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 4</span>
-                                <span class="text-[10px] text-gray-400 font-medium">Ch. One to Ten</span>
+                                <span class="text-xs font-bold text-wonderNavy bg-sky-100 px-2.5 py-0.5 rounded-md"><i class="fa-solid fa-bookmark text-wonderSky mr-1"></i> Chapter: One to Ten</span>
                             </div>
                             <h4 class="font-bold text-wonderNavy text-sm">August talks about using a “scale of one to ten”. When his mom asks him about his day, he says it was a “five”. What kind of a day did August have?</h4>
-                            <textarea id="cr-q4" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                            
+                            <!-- Novel Sentence Reference -->
+                            <div class="bg-sky-50/70 p-3 rounded-xl border border-sky-100 text-xs italic text-gray-700 space-y-1">
+                                <div class="font-bold text-wonderNavy not-italic flex items-center gap-1.5 text-[11px]">
+                                    <i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Novel Reference:
+                                </div>
+                                <p>“Since I was little, the doctors and Mom and Dad have used a scale of one to ten to rate how much something hurts... <span class="font-semibold text-wonderNavy">'Five,' I said.</span>”</p>
+                            </div>
+
+                            <textarea id="cr-q4" rows="3" placeholder="Type your response here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
                         </div>
-                        <button onclick="toggleHint('hint-4')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
-                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-4-lbl">Show Hint / Sample Answer</span>
-                        </button>
-                        <div id="hint-4" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
-                            <strong>Hint/Answer:</strong> A "five" represents an average or medium day—neither terrible nor amazing, right in the middle.
+
+                        <div class="pt-2 border-t border-sky-100/60">
+                            <button onclick="toggleHint('hint-4')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                                <i class="fa-regular fa-lightbulb"></i> <span id="hint-4-lbl">Show Hint / Sample Answer</span>
+                            </button>
+                            <div id="hint-4" class="hidden mt-2 text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                                <strong>Hint/Answer:</strong> A "five" represents an average, middle-of-the-road day—neither great nor terrible.
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Q5 (p. 58) -->
+                    <!-- Q5: Ch. Padawan -->
                     <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <div class="flex items-center justify-between">
                                 <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 5</span>
-                                <span class="text-[10px] text-gray-400 font-medium">Ch. Padawan</span>
+                                <span class="text-xs font-bold text-wonderNavy bg-sky-100 px-2.5 py-0.5 rounded-md"><i class="fa-solid fa-bookmark text-wonderSky mr-1"></i> Chapter: Padawan</span>
                             </div>
                             <h4 class="font-bold text-wonderNavy text-sm">What do you think the term “good call” means?</h4>
-                            <textarea id="cr-q5" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                            
+                            <!-- Novel Sentence Reference -->
+                            <div class="bg-sky-50/70 p-3 rounded-xl border border-sky-100 text-xs italic text-gray-700 space-y-1">
+                                <div class="font-bold text-wonderNavy not-italic flex items-center gap-1.5 text-[11px]">
+                                    <i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Novel Reference:
+                                </div>
+                                <p>“<span class="font-semibold text-wonderNavy">'Good call,' Dad said to Mom</span>, nodding... He meant sending me to Beecher Prep.”</p>
+                            </div>
+
+                            <textarea id="cr-q5" rows="3" placeholder="Type your response here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
                         </div>
-                        <button onclick="toggleHint('hint-5')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
-                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-5-lbl">Show Hint / Sample Answer</span>
-                        </button>
-                        <div id="hint-5" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
-                            <strong>Hint/Answer:</strong> It means a good decision or a wise choice (such as Dad acknowledging Mom's decision to send August to school).
+
+                        <div class="pt-2 border-t border-sky-100/60">
+                            <button onclick="toggleHint('hint-5')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                                <i class="fa-regular fa-lightbulb"></i> <span id="hint-5-lbl">Show Hint / Sample Answer</span>
+                            </button>
+                            <div id="hint-5" class="hidden mt-2 text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                                <strong>Hint/Answer:</strong> "Good call" means a smart decision or wise choice (Dad agreeing with Mom's decision).
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Q6 (p. 62) -->
+                    <!-- Q6: Ch. October -->
                     <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <div class="flex items-center justify-between">
                                 <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 6</span>
-                                <span class="text-[10px] text-gray-400 font-medium">Ch. October</span>
+                                <span class="text-xs font-bold text-wonderNavy bg-sky-100 px-2.5 py-0.5 rounded-md"><i class="fa-solid fa-bookmark text-wonderSky mr-1"></i> Chapter: October</span>
                             </div>
                             <h4 class="font-bold text-wonderNavy text-sm">How long did it take all the kids in August’s school to get used to his face?</h4>
-                            <textarea id="cr-q6" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                            
+                            <!-- Novel Sentence Reference -->
+                            <div class="bg-sky-50/70 p-3 rounded-xl border border-sky-100 text-xs italic text-gray-700 space-y-1">
+                                <div class="font-bold text-wonderNavy not-italic flex items-center gap-1.5 text-[11px]">
+                                    <i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Novel Reference:
+                                </div>
+                                <p>“<span class="font-semibold text-wonderNavy">It took about a month for the rest of the kids to get used to my face.</span>”</p>
+                            </div>
+
+                            <textarea id="cr-q6" rows="3" placeholder="Type your response here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
                         </div>
-                        <button onclick="toggleHint('hint-6')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
-                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-6-lbl">Show Hint / Sample Answer</span>
-                        </button>
-                        <div id="hint-6" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
-                            <strong>Hint/Answer:</strong> It took about one month (by October) for the other students at Beecher Prep to get accustomed to seeing his face.
+
+                        <div class="pt-2 border-t border-sky-100/60">
+                            <button onclick="toggleHint('hint-6')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                                <i class="fa-regular fa-lightbulb"></i> <span id="hint-6-lbl">Show Hint / Sample Answer</span>
+                            </button>
+                            <div id="hint-6" class="hidden mt-2 text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                                <strong>Hint/Answer:</strong> It took about one month (by October) for the other students at Beecher Prep to stop staring and get used to seeing his face.
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Q7 (p. 63) -->
+                    <!-- Q7: Ch. Apples -->
                     <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <div class="flex items-center justify-between">
                                 <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 7</span>
-                                <span class="text-[10px] text-gray-400 font-medium">Ch. Apples</span>
+                                <span class="text-xs font-bold text-wonderNavy bg-sky-100 px-2.5 py-0.5 rounded-md"><i class="fa-solid fa-bookmark text-wonderSky mr-1"></i> Chapter: Apples</span>
                             </div>
                             <h4 class="font-bold text-wonderNavy text-sm">What does “cracking up” mean?</h4>
-                            <textarea id="cr-q7" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                            
+                            <!-- Novel Sentence Reference -->
+                            <div class="bg-sky-50/70 p-3 rounded-xl border border-sky-100 text-xs italic text-gray-700 space-y-1">
+                                <div class="font-bold text-wonderNavy not-italic flex items-center gap-1.5 text-[11px]">
+                                    <i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Novel Reference:
+                                </div>
+                                <p>“<span class="font-semibold text-wonderNavy">Mom and I were cracking up so hard</span> we could barely breathe.”</p>
+                            </div>
+
+                            <textarea id="cr-q7" rows="3" placeholder="Type your response here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
                         </div>
-                        <button onclick="toggleHint('hint-7')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
-                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-7-lbl">Show Hint / Sample Answer</span>
-                        </button>
-                        <div id="hint-7" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
-                            <strong>Hint/Answer:</strong> "Cracking up" means laughing hard or uncontrollably at something funny.
+
+                        <div class="pt-2 border-t border-sky-100/60">
+                            <button onclick="toggleHint('hint-7')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                                <i class="fa-regular fa-lightbulb"></i> <span id="hint-7-lbl">Show Hint / Sample Answer</span>
+                            </button>
+                            <div id="hint-7" class="hidden mt-2 text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                                <strong>Hint/Answer:</strong> "Cracking up" means laughing very hard or uncontrollably at something funny.
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Q8 (p. 65) -->
+                    <!-- Q8: Ch. Mr. Browne's October Precept -->
                     <div class="border border-sky-100 hover:border-wonderSky transition-all rounded-xl p-5 bg-sky-50/20 flex flex-col justify-between space-y-3">
-                        <div class="space-y-2">
+                        <div class="space-y-3">
                             <div class="flex items-center justify-between">
                                 <span class="bg-wonderSky text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">Question 8</span>
-                                <span class="text-[10px] text-gray-400 font-medium">Ch. Mr. Browne's October Precept</span>
+                                <span class="text-xs font-bold text-wonderNavy bg-sky-100 px-2.5 py-0.5 rounded-md"><i class="fa-solid fa-bookmark text-wonderSky mr-1"></i> Chapter: Mr. Browne's October Precept</span>
                             </div>
                             <h4 class="font-bold text-wonderNavy text-sm">What do you think “deeds” are, based on what August writes about the precept?</h4>
-                            <textarea id="cr-q8" rows="3" placeholder="Type your answer here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
+                            
+                            <!-- Novel Sentence Reference -->
+                            <div class="bg-sky-50/70 p-3 rounded-xl border border-sky-100 text-xs italic text-gray-700 space-y-1">
+                                <div class="font-bold text-wonderNavy not-italic flex items-center gap-1.5 text-[11px]">
+                                    <i class="fa-solid fa-quote-left text-wonderSkyDark"></i> Novel Reference:
+                                </div>
+                                <p>“Mr. Browne's precept for October was: <span class="font-semibold text-wonderNavy">YOUR DEEDS ARE YOUR MONUMENTS.</span>”</p>
+                            </div>
+
+                            <textarea id="cr-q8" rows="3" placeholder="Type your response here..." class="w-full text-xs p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-wonderSky resize-none"></textarea>
                         </div>
-                        <button onclick="toggleHint('hint-8')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
-                            <i class="fa-regular fa-lightbulb"></i> <span id="hint-8-lbl">Show Hint / Sample Answer</span>
-                        </button>
-                        <div id="hint-8" class="hidden text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
-                            <strong>Hint/Answer:</strong> "Deeds" are actions or things that people do. Your deeds represent who you are as a person ("Your deeds are your monuments").
+
+                        <div class="pt-2 border-t border-sky-100/60">
+                            <button onclick="toggleHint('hint-8')" class="text-xs text-wonderSkyDark hover:underline font-semibold text-left flex items-center gap-1">
+                                <i class="fa-regular fa-lightbulb"></i> <span id="hint-8-lbl">Show Hint / Sample Answer</span>
+                            </button>
+                            <div id="hint-8" class="hidden mt-2 text-xs bg-amber-50 text-amber-900 p-3 rounded-lg border border-amber-200">
+                                <strong>Hint/Answer:</strong> "Deeds" are actions or things that people do. Your actions define your character and how people will remember you.
+                            </div>
                         </div>
                     </div>
 
@@ -504,7 +597,6 @@
             </div>
         </section>
 
-        <!-- TAB 4: VOCABULARY PREVIEW FOR NEXT LESSON -->
         <section id="tab-vocab" class="tab-content hidden space-y-8">
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-sky-100 space-y-6">
                 
@@ -601,7 +693,6 @@
             </div>
         </section>
 
-        <!-- TAB 5: "CHOOSE KIND" WORKSHOP -->
         <section id="tab-workshop" class="tab-content hidden space-y-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 
@@ -669,89 +760,20 @@
 
     </main>
 
-    <!-- Client-side Interactive JavaScript -->
     <script>
-        /* =========================================================================
-           1. HOMEWORK VOCABULARY DATASET (Choose Kind - Mr. Browne's October Precept)
-           ========================================================================= */
+        /* Homework Vocab Data */
         const hwVocabData = [
-            {
-                word: "precept",
-                pos: "noun",
-                definition: "a rule or principle that guides behavior or decisions about important things",
-                sentence: "Basically, a precept is anything that helps guide us when making decisions about really important things.",
-                chapter: "Choose Kind"
-            },
-            {
-                word: "motto",
-                pos: "noun",
-                definition: "a short sentence or phrase expressing a belief or guiding principle",
-                sentence: "Like a motto? someone called out.",
-                chapter: "Choose Kind"
-            },
-            {
-                word: "doodling",
-                pos: "verb",
-                definition: "drawing simple pictures or patterns while thinking about something else",
-                sentence: "I was mostly doodling in my notebook while he talked.",
-                chapter: "Choose Kind"
-            },
-            {
-                word: "stampeding",
-                pos: "verb",
-                definition: "rushing forward in a wild, uncontrolled way as a large group",
-                sentence: "I just waited for everyone to finish stampeding and the lunchroom teacher to tell us what to do next.",
-                chapter: "Lunch"
-            },
-            {
-                word: "tortoise",
-                pos: "noun",
-                definition: "a slow-moving land reptile with a hard shell",
-                sentence: "I eat like a tortoise, if you've ever seen a tortoise eating.",
-                chapter: "Lunch"
-            },
-            {
-                word: "prehistoric",
-                pos: "adjective",
-                definition: "belonging to the time before written history; very ancient",
-                sentence: "Like some prehistoric swamp thing.",
-                chapter: "Lunch"
-            },
-            {
-                word: "exception",
-                pos: "noun",
-                definition: "a case that does not follow the general rule",
-                sentence: "If she wanted to sit here, we could make an exception.",
-                chapter: "The Summer Table"
-            },
-            {
-                word: "snuggling",
-                pos: "verb",
-                definition: "lying close to someone or something in a comfortable, affectionate way",
-                sentence: "I was snuggling with Daisy on my bed when Dad came to tuck me in later.",
-                chapter: "Padawan"
-            },
-            {
-                word: "huffy",
-                pos: "adjective",
-                definition: "annoyed or irritated and showing it through behavior",
-                sentence: "You've been kind of huffy with her all night long.",
-                chapter: "Padawan"
-            },
-            {
-                word: "gloomy",
-                pos: "adjective",
-                definition: "dark, sad, or depressing",
-                sentence: "They were a gloomy party that night, and the gloom gathered still deeper on them in the following days.",
-                chapter: "Padawan"
-            },
-            {
-                word: "contagious",
-                pos: "adjective",
-                definition: "able to be spread from one person to another through contact",
-                sentence: "Like I had some germ they could catch, like my face was contagious.",
-                chapter: "Wake Me Up when September Ends"
-            }
+            { word: "precept", pos: "noun", definition: "a rule or principle that guides behavior or decisions about important things", sentence: "Basically, a precept is anything that helps guide us when making decisions about really important things.", chapter: "Choose Kind" },
+            { word: "motto", pos: "noun", definition: "a short sentence or phrase expressing a belief or guiding principle", sentence: "Like a motto? someone called out.", chapter: "Choose Kind" },
+            { word: "doodling", pos: "verb", definition: "drawing simple pictures or patterns while thinking about something else", sentence: "I was mostly doodling in my notebook while he talked.", chapter: "Choose Kind" },
+            { word: "stampeding", pos: "verb", definition: "rushing forward in a wild, uncontrolled way as a large group", sentence: "I just waited for everyone to finish stampeding and the lunchroom teacher to tell us what to do next.", chapter: "Lunch" },
+            { word: "tortoise", pos: "noun", definition: "a slow-moving land reptile with a hard shell", sentence: "I eat like a tortoise, if you've ever seen a tortoise eating.", chapter: "Lunch" },
+            { word: "prehistoric", pos: "adjective", definition: "belonging to the time before written history; very ancient", sentence: "Like some prehistoric swamp thing.", chapter: "Lunch" },
+            { word: "exception", pos: "noun", definition: "a case that does not follow the general rule", sentence: "If she wanted to sit here, we could make an exception.", chapter: "The Summer Table" },
+            { word: "snuggling", pos: "verb", definition: "lying close to someone or something in a comfortable, affectionate way", sentence: "I was snuggling with Daisy on my bed when Dad came to tuck me in later.", chapter: "Padawan" },
+            { word: "huffy", pos: "adjective", definition: "annoyed or irritated and showing it through behavior", sentence: "You've been kind of huffy with her all night long.", chapter: "Padawan" },
+            { word: "gloomy", pos: "adjective", definition: "dark, sad, or depressing", sentence: "They were a gloomy party that night, and the gloom gathered still deeper on them in the following days.", chapter: "Padawan" },
+            { word: "contagious", pos: "adjective", definition: "able to be spread from one person to another through contact", sentence: "Like I had some germ they could catch, like my face was contagious.", chapter: "Wake Me Up when September Ends" }
         ];
 
         /* Homework Quiz Generator */
@@ -764,18 +786,13 @@
                 const card = document.createElement('div');
                 card.className = "bg-white p-4 sm:p-5 rounded-2xl border border-sky-100 shadow-xs hover:border-wonderSky transition-all space-y-3";
 
-                // Generate options with 1 correct and 3 distractors
                 let options = [item.word];
                 while (options.length < 4) {
                     const randomWord = hwVocabData[Math.floor(Math.random() * hwVocabData.length)].word;
-                    if (!options.includes(randomWord)) {
-                        options.push(randomWord);
-                    }
+                    if (!options.includes(randomWord)) options.push(randomWord);
                 }
-                // Shuffle options
                 options.sort(() => Math.random() - 0.5);
 
-                // Sentence blanked out
                 const regex = new RegExp(`\\b${item.word}\\b`, 'gi');
                 const blankSentence = item.sentence.replace(regex, '________');
 
@@ -805,7 +822,6 @@
             });
         }
 
-        /* Render Homework Word List Table */
         function renderHwTable() {
             const tbody = document.getElementById('hw-vocab-table-body');
             if (!tbody) return;
@@ -844,9 +860,7 @@
 
             hwVocabData.forEach((item, idx) => {
                 const selected = document.querySelector(`input[name="hw-q-${idx}"]:checked`);
-                if (selected && selected.value === item.word) {
-                    score++;
-                }
+                if (selected && selected.value === item.word) score++;
             });
 
             const resultsEl = document.getElementById('hw-quiz-results');
@@ -854,7 +868,7 @@
 
             if (score === total) {
                 resultsEl.className = "text-xs font-bold p-3.5 rounded-xl border bg-emerald-50 text-emerald-900 border-emerald-300 flex items-center gap-2";
-                resultsEl.innerHTML = `<i class="fa-solid fa-trophy text-amber-500 text-lg"></i> Outstanding! Perfect score: ${score}/${total}! You mastered last class's vocabulary homework!`;
+                resultsEl.innerHTML = `<i class="fa-solid fa-trophy text-amber-500 text-lg"></i> Outstanding! Perfect score: ${score}/${total}! You mastered last class's homework vocabulary!`;
             } else if (score >= 8) {
                 resultsEl.className = "text-xs font-bold p-3.5 rounded-xl border bg-sky-50 text-wonderNavy border-sky-300 flex items-center gap-2";
                 resultsEl.innerHTML = `<i class="fa-solid fa-circle-check text-wonderSky text-lg"></i> Great job! Score: ${score}/${total}. Review the word list for the ones you missed!`;
@@ -864,87 +878,19 @@
             }
         }
 
-        /* =========================================================================
-           2. NEXT LESSON VOCABULARY DATASET (Apples - Names)
-           ========================================================================= */
+        /* Next Lesson Vocab Dataset */
         const vocabData = [
-            {
-                word: "evites",
-                pos: "noun",
-                definition: "electronic invitations sent online or by email",
-                sentence: "We sent out the evites kind of late.",
-                chapter: "Apples"
-            },
-            {
-                word: "RSVP",
-                pos: "verb",
-                definition: "to respond to an invitation saying whether you will attend",
-                sentence: "His mom was the only person who didn't RSVP at all.",
-                chapter: "Apples"
-            },
-            {
-                word: "recital",
-                pos: "noun",
-                definition: "a performance of music or dance, usually by students",
-                sentence: "Charlotte had a dance recital earlier in the day.",
-                chapter: "Apples"
-            },
-            {
-                word: "aversion",
-                pos: "noun",
-                definition: "a strong dislike or unwillingness toward something",
-                sentence: "It's an aversion, which is a word I just learned in Mr. Browne's class. I have an aversion to having my picture taken.",
-                chapter: "School Pictures"
-            },
-            {
-                word: "classify",
-                pos: "verb",
-                definition: "to arrange things into groups based on similar qualities",
-                sentence: "We had to classify a substance as an acid or a base.",
-                chapter: "The Cheese Touch"
-            },
-            {
-                word: "substance",
-                pos: "noun",
-                definition: "a particular kind of matter with specific properties",
-                sentence: "We had to classify a substance as an acid or a base.",
-                chapter: "The Cheese Touch"
-            },
-            {
-                word: "fraction",
-                pos: "noun",
-                definition: "a very small part or amount of something",
-                sentence: "My hand accidentally bumped his hand for a fraction of a second.",
-                chapter: "The Cheese Touch"
-            },
-            {
-                word: "concerned",
-                pos: "adjective",
-                definition: "worried or anxious about something",
-                sentence: "What he was most concerned about was getting to the lab sink to wash his hands as fast as possible.",
-                chapter: "The Cheese Touch"
-            },
-            {
-                word: "oozing",
-                pos: "verb",
-                definition: "slowly flowing or leaking out",
-                sentence: "The Bleeding Scream, the one that has fake blood oozing out over the skull mask.",
-                chapter: "Costumes"
-            },
-            {
-                word: "coincidence",
-                pos: "noun",
-                definition: "when things happen at the same time by chance, not planned",
-                sentence: "Julian was going as Jango Fett, which was a weird coincidence.",
-                chapter: "Costumes"
-            },
-            {
-                word: "meltdown",
-                pos: "noun",
-                definition: "an emotional breakdown or loss of control",
-                sentence: "Via had this big crying meltdown about something.",
-                chapter: "Costumes"
-            }
+            { word: "evites", pos: "noun", definition: "electronic invitations sent online or by email", sentence: "We sent out the evites kind of late.", chapter: "Apples" },
+            { word: "RSVP", pos: "verb", definition: "to respond to an invitation saying whether you will attend", sentence: "His mom was the only person who didn't RSVP at all.", chapter: "Apples" },
+            { word: "recital", pos: "noun", definition: "a performance of music or dance, usually by students", sentence: "Charlotte had a dance recital earlier in the day.", chapter: "Apples" },
+            { word: "aversion", pos: "noun", definition: "a strong dislike or unwillingness toward something", sentence: "It's an aversion, which is a word I just learned in Mr. Browne's class. I have an aversion to having my picture taken.", chapter: "School Pictures" },
+            { word: "classify", pos: "verb", definition: "to arrange things into groups based on similar qualities", sentence: "We had to classify a substance as an acid or a base.", chapter: "The Cheese Touch" },
+            { word: "substance", pos: "noun", definition: "a particular kind of matter with specific properties", sentence: "We had to classify a substance as an acid or a base.", chapter: "The Cheese Touch" },
+            { word: "fraction", pos: "noun", definition: "a very small part or amount of something", sentence: "My hand accidentally bumped his hand for a fraction of a second.", chapter: "The Cheese Touch" },
+            { word: "concerned", pos: "adjective", definition: "worried or anxious about something", sentence: "What he was most concerned about was getting to the lab sink to wash his hands as fast as possible.", chapter: "The Cheese Touch" },
+            { word: "oozing", pos: "verb", definition: "slowly flowing or leaking out", sentence: "The Bleeding Scream, the one that has fake blood oozing out over the skull mask.", chapter: "Costumes" },
+            { word: "coincidence", pos: "noun", definition: "when things happen at the same time by chance, not planned", sentence: "Julian was going as Jango Fett, which was a weird coincidence.", chapter: "Costumes" },
+            { word: "meltdown", pos: "noun", definition: "an emotional breakdown or loss of control", sentence: "Via had this big crying meltdown about something.", chapter: "Costumes" }
         ];
 
         let currentVocabChapter = 'All';
@@ -1050,7 +996,6 @@
             }
         }
 
-        // Practice Quiz for Next Vocab
         const nextVocabQuizData = [
             { id: 'nv1', options: ['aversion', 'substance', 'meltdown'], answer: 'aversion', prompt: '1. A strong dislike or unwillingness toward something is an...' },
             { id: 'nv2', options: ['evites', 'coincidence', 'recital'], answer: 'coincidence', prompt: '2. When two things happen at the same time by chance, it is a...' },
@@ -1098,9 +1043,7 @@
             }
         }
 
-        /* =========================================================================
-           3. GENERAL TAB NAVIGATION & PROGRESS CONTROL
-           ========================================================================= */
+        /* Navigation & Tabs */
         function switchTab(tabId) {
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(el => el.classList.add('hidden'));
@@ -1126,11 +1069,11 @@
         function updateProgress(tabId) {
             const progressBar = document.getElementById('overall-progress');
             const progressPercent = document.getElementById('progress-percent');
-            let percentage = 15;
+            let percentage = 20;
 
-            if (tabId === 'tab-hwvocab') percentage = 15;
-            if (tabId === 'tab-warmup') percentage = 35;
-            if (tabId === 'tab-closereading') percentage = 55;
+            if (tabId === 'tab-hwvocab') percentage = 20;
+            if (tabId === 'tab-warmup') percentage = 40;
+            if (tabId === 'tab-closereading') percentage = 60;
             if (tabId === 'tab-vocab') percentage = 80;
             if (tabId === 'tab-workshop') percentage = 100;
 
@@ -1140,9 +1083,6 @@
             }
         }
 
-        /* =========================================================================
-           4. WARM-UP & CLOSE READING SAVING / HINTS
-           ========================================================================= */
         function saveWarmup(option) {
             const feedback = document.getElementById('warmup-feedback');
             feedback.classList.remove('hidden');
@@ -1166,9 +1106,6 @@
             status.classList.remove('hidden');
         }
 
-        /* =========================================================================
-           5. WORKSHOP SCENARIOS & PRECEPT GENERATOR
-           ========================================================================= */
         function chooseOption(type) {
             const feedback = document.getElementById('scenario-feedback');
             feedback.classList.remove('hidden');
